@@ -16,36 +16,24 @@ class ExcelToBeancountImporter:
         self.excel_file_path = excel_file_path
         self.df = None
         
-        # Column mappings (Georgian to English)
+        # Column mappings for SALES data (only the 4 needed columns)
         self.column_map = {
-            'ზედნადები': 'description',          # Description/Narration
-            'სტატუსი': 'status',                # Status
-            'მდგომარეობა': 'state',              # State/Condition
-            'კატეგორია': 'category',            # Category
-            'ტიპი': 'type',                     # Type
-            'ორგანიზაცია': 'organization',      # Organization
-            'თანხა': 'amount',                  # Amount
-            'მიწოდების ადგილი': 'location',       # Delivery Location
-            'გააქტიურების თარ.': 'date',         # Activation Date
-            'შენიშვნა': 'notes',                # Notes
-            'ა/ფ ID': 'person_id',              # Person ID
-            'STAT': 'stat',                     # Stat
-            'ტრანსპორტირების ხარჯი': 'transport_cost',  # Transport Cost
-            'ID': 'id'                          # ID
+            'ორგანიზაცია': 'organization',      # Customer/Organization
+            'თანხა': 'amount',                  # Amount (VAT included)
+            'გააქტიურების თარ.': 'date',         # Sale Date
+            'შენიშვნა': 'payment_method',       # Payment method (cash/bank)
         }
         
-        # Category to account mapping
-        self.category_accounts = {
-            # Default mappings - can be customized based on actual categories
-            'default': 'Expenses:Miscellaneous',
-            'transport': 'Expenses:Transport',
-            'food': 'Expenses:Food', 
-            'salary': 'Income:Salary',
-            'refund': 'Income:Refunds'
-        }
+        # Sales accounts structure
+        self.sales_account = "Income:Sales"
+        self.vat_account = "Liabilities:VAT:Output"
+        self.cash_account = "Assets:Cash"
+        self.bank_account = "Assets:Bank:Checking"
         
-        # Default accounts
-        self.default_asset_account = "Assets:Bank:Checking"
+        # VAT rate (18%)
+        self.vat_rate = 0.18
+        
+        # Default currency
         self.default_currency = "INR"  # Based on your existing ledger
         
     def load_data(self):
@@ -54,9 +42,24 @@ class ExcelToBeancountImporter:
             self.df = pd.read_excel(self.excel_file_path, engine='xlrd')
             print(f"Successfully loaded {len(self.df)} rows from Excel file")
             
-            # Rename columns to English for easier processing
+            # Keep only the 4 columns we need for sales data
+            needed_columns = list(self.column_map.keys())
+            
+            # Check if all needed columns exist
+            missing_columns = [col for col in needed_columns if col not in self.df.columns]
+            if missing_columns:
+                print(f"Warning: Missing columns: {missing_columns}")
+                print(f"Available columns: {list(self.df.columns)}")
+            
+            # Filter to only needed columns and rename
+            available_columns = [col for col in needed_columns if col in self.df.columns]
+            self.df = self.df[available_columns]
             self.df = self.df.rename(columns=self.column_map)
             
+            # Remove rows with missing essential data
+            self.df = self.df.dropna(subset=['organization', 'amount'])
+            
+            print(f"Processed {len(self.df)} valid sales transactions")
             return True
         except Exception as e:
             print(f"Error loading Excel file: {e}")
@@ -108,73 +111,78 @@ class ExcelToBeancountImporter:
         
         return datetime.now().strftime('%Y-%m-%d')
     
-    def categorize_transaction(self, row):
-        """Determine the appropriate expense/income account based on category/description"""
-        category = str(row.get('category', '')).lower()
-        description = str(row.get('description', '')).lower()
+    def determine_payment_account(self, payment_method):
+        """Determine asset account based on payment method"""
+        if pd.isna(payment_method):
+            return self.bank_account  # Default to bank
         
-        # Simple keyword-based categorization
-        if any(word in category or word in description for word in ['transport', 'ტრანსპორტ', 'car', 'taxi']):
-            return 'Expenses:Transport'
-        elif any(word in category or word in description for word in ['food', 'საკვები', 'restaurant', 'lunch']):
-            return 'Expenses:Food'
-        elif any(word in category or word in description for word in ['salary', 'ხელფასი', 'income']):
-            return 'Income:Salary'
-        elif any(word in category or word in description for word in ['refund', 'დაბრუნება']):
-            return 'Income:Refunds'
+        payment_str = str(payment_method).lower()
+        
+        # Check for cash indicators
+        if any(word in payment_str for word in ['cash', 'ნაღდი', 'ნაღ', 'კეში']):
+            return self.cash_account
+        # Check for bank indicators  
+        elif any(word in payment_str for word in ['bank', 'ბანკი', 'transfer', 'card', 'ბარათი']):
+            return self.bank_account
         else:
-            return 'Expenses:Miscellaneous'
+            # If unclear, default to bank
+            return self.bank_account
+    
+    def calculate_vat_amounts(self, total_amount):
+        """Calculate VAT and net amounts from VAT-inclusive total"""
+        # Total = Net + VAT
+        # VAT = Net * VAT_rate
+        # Total = Net + (Net * VAT_rate) = Net * (1 + VAT_rate)
+        # Therefore: Net = Total / (1 + VAT_rate)
+        
+        net_amount = total_amount / (1 + self.vat_rate)
+        vat_amount = total_amount - net_amount
+        
+        return net_amount, vat_amount
     
     def create_beancount_entry(self, row):
-        """Create a single Beancount transaction entry"""
+        """Create a single Beancount sales transaction entry"""
         date = self.format_date(row.get('date'))
-        description = str(row.get('description', 'Unknown transaction')).strip()
-        amount = self.clean_amount(row.get('amount', 0))
-        transport_cost = self.clean_amount(row.get('transport_cost', 0))
+        organization = str(row.get('organization', 'Unknown Customer')).strip()
+        total_amount = self.clean_amount(row.get('amount', 0))
+        payment_method = row.get('payment_method', '')
         
-        if amount == 0 and transport_cost == 0:
+        if total_amount == 0:
             return None  # Skip zero-value transactions
         
-        # Clean description for Beancount format
-        description = description.replace('"', '\\"')  # Escape quotes
+        # Clean organization name for description
+        organization = organization.replace('"', '\\"')  # Escape quotes
         
-        # Determine account based on category
-        counter_account = self.categorize_transaction(row)
+        # Determine payment account (cash vs bank)
+        asset_account = self.determine_payment_account(payment_method)
+        
+        # Calculate VAT components
+        net_amount, vat_amount = self.calculate_vat_amounts(total_amount)
         
         entry_lines = []
-        entry_lines.append(f'{date} * "{description}"')
+        entry_lines.append(f'{date} * "Sale to {organization}"')
         
-        # Main amount posting
-        if amount != 0:
-            if counter_account.startswith('Income:'):
-                # Income transaction: positive to asset, negative from income
-                entry_lines.append(f'    {self.default_asset_account}    {amount:.2f} {self.default_currency}')
-                entry_lines.append(f'    {counter_account}')  # Let Beancount interpolate
-            else:
-                # Expense transaction: negative from asset, positive to expense
-                entry_lines.append(f'    {self.default_asset_account}    {-amount:.2f} {self.default_currency}')
-                entry_lines.append(f'    {counter_account}')  # Let Beancount interpolate
+        # Sales transaction structure:
+        # Asset account receives the total amount
+        entry_lines.append(f'    {asset_account}    {total_amount:.2f} {self.default_currency}')
         
-        # Add transport cost if present
-        if transport_cost != 0:
-            entry_lines.append(f'    {self.default_asset_account}    {-transport_cost:.2f} {self.default_currency}')
-            entry_lines.append(f'    Expenses:Transport')
+        # Sales revenue (net amount without VAT)
+        entry_lines.append(f'    {self.sales_account}    {-net_amount:.2f} {self.default_currency}')
+        
+        # VAT liability (VAT amount)
+        entry_lines.append(f'    {self.vat_account}    {-vat_amount:.2f} {self.default_currency}')
         
         return '\n'.join(entry_lines) + '\n'
     
     def generate_account_declarations(self):
-        """Generate account open declarations"""
+        """Generate account open declarations for sales operations"""
         accounts = set()
-        accounts.add(self.default_asset_account)
         
-        # Collect all accounts used
-        for _, row in self.df.iterrows():
-            account = self.categorize_transaction(row)
-            accounts.add(account)
-        
-        # Add transport account if transport costs exist
-        if self.df['transport_cost'].notna().any():
-            accounts.add('Expenses:Transport')
+        # Always add these core sales accounts
+        accounts.add(self.sales_account)
+        accounts.add(self.vat_account)
+        accounts.add(self.bank_account)
+        accounts.add(self.cash_account)
         
         declarations = []
         for account in sorted(accounts):

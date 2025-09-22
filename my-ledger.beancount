@@ -1,29 +1,1243 @@
-;; My Personal Ledger
-option "title" "My Personal Finance"
-option "operating_currency" "INR"
+;; Generated from Excel file: c:/journal-entries-with-beancount-and-fava/report(18).xls
+;; Generated on: 2025-09-22 13:30:34
 
-;; Open accounts (required before using)
-2025-01-01 open Assets:Bank:Checking INR
-2025-01-01 open Assets:Cash INR
-2025-01-01 open Income:Salary INR
-2025-01-01 open Expenses:Food INR
-2025-01-01 open Expenses:Transport INR
-2025-01-01 open Equity:Opening-Balances INR
+2025-01-01 open Assets:Bank:Checking GEL
+2025-01-01 open Assets:Cash GEL
+2025-01-01 open Income:Sales GEL
+2025-01-01 open Liabilities:VAT:Output GEL
 
-;; Starting balance
-2025-09-01 * "Opening balance"
-  Assets:Bank:Checking    25000.00 INR
-  Equity:Opening-Balances
 
-;; Sample transactions
-2025-09-22 * "Monthly salary"
-  Assets:Bank:Checking   50000.00 INR
-  Income:Salary
+2025-09-22 * "Sale to (412764389-დღგ) შპს  ფლორმარ კოსმეტიკს"
+    Assets:Bank:Checking    200.00 GEL
+    Income:Sales    -169.49 GEL
+    Liabilities:VAT:Output    -30.51 GEL
 
-2025-09-22 * "Lunch"
-  Expenses:Food    300.00 INR
-  Assets:Cash
+2025-09-22 * "Sale to (60001009790-დღგ) კონსტანტინე ხელაძე"
+    Assets:Cash    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
 
-2025-09-22 * "ATaaaM withdrawal" 
-  Assets:Cash      2000.00 INR
-  Assets:Bank:Checking
+2025-09-22 * "Sale to (421274203-დღგ) შპს ზუმი"
+    Assets:Bank:Checking    145.00 GEL
+    Income:Sales    -122.88 GEL
+    Liabilities:VAT:Output    -22.12 GEL
+
+2025-09-20 * "Sale to (202230790-დღგ) შპს კომპანია ორბიტა"
+    Assets:Bank:Checking    65.00 GEL
+    Income:Sales    -55.08 GEL
+    Liabilities:VAT:Output    -9.92 GEL
+
+2025-09-20 * "Sale to (412721318-დღგ) შპს გალაკო"
+    Assets:Bank:Checking    5.00 GEL
+    Income:Sales    -4.24 GEL
+    Liabilities:VAT:Output    -0.76 GEL
+
+2025-09-20 * "Sale to (419620501-დღგ) შპს გიო 2017"
+    Assets:Bank:Checking    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-09-20 * "Sale to (419620501-დღგ) შპს გიო 2017"
+    Assets:Bank:Checking    20.00 GEL
+    Income:Sales    -16.95 GEL
+    Liabilities:VAT:Output    -3.05 GEL
+
+2025-09-20 * "Sale to (412738337-დღგ) შპს მშენებელი"
+    Assets:Bank:Checking    245.00 GEL
+    Income:Sales    -207.63 GEL
+    Liabilities:VAT:Output    -37.37 GEL
+
+2025-09-20 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    1800.00 GEL
+    Income:Sales    -1525.42 GEL
+    Liabilities:VAT:Output    -274.58 GEL
+
+2025-09-20 * "Sale to (405535327-დღგ) შპს ბრიტანია გლობალ"
+    Assets:Bank:Checking    460.00 GEL
+    Income:Sales    -389.83 GEL
+    Liabilities:VAT:Output    -70.17 GEL
+
+2025-09-20 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    35.00 GEL
+    Income:Sales    -29.66 GEL
+    Liabilities:VAT:Output    -5.34 GEL
+
+2025-09-19 * "Sale to (201991229-დღგ) სს გეფა"
+    Assets:Bank:Checking    400.00 GEL
+    Income:Sales    -338.98 GEL
+    Liabilities:VAT:Output    -61.02 GEL
+
+2025-09-19 * "Sale to (406028935-დღგ) შპს ევითბილისი"
+    Assets:Bank:Checking    215.00 GEL
+    Income:Sales    -182.20 GEL
+    Liabilities:VAT:Output    -32.80 GEL
+
+2025-09-19 * "Sale to (412733957-დღგ) შპს გოგე და კომპანია"
+    Assets:Bank:Checking    420.00 GEL
+    Income:Sales    -355.93 GEL
+    Liabilities:VAT:Output    -64.07 GEL
+
+2025-09-19 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    985.00 GEL
+    Income:Sales    -834.75 GEL
+    Liabilities:VAT:Output    -150.25 GEL
+
+2025-09-19 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-19 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    505.00 GEL
+    Income:Sales    -427.97 GEL
+    Liabilities:VAT:Output    -77.03 GEL
+
+2025-09-19 * "Sale to (405404922-დღგ) შპს ნათს ინქორფორეითიდ"
+    Assets:Bank:Checking    600.00 GEL
+    Income:Sales    -508.47 GEL
+    Liabilities:VAT:Output    -91.53 GEL
+
+2025-09-19 * "Sale to (419620501-დღგ) შპს გიო 2017"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-09-19 * "Sale to (405562519-დღგ) მბდ ინშაათ სანაი ვე თიჯარეთ ანონიმ შირქეთის საქართველოს ფილიალი"
+    Assets:Bank:Checking    220.00 GEL
+    Income:Sales    -186.44 GEL
+    Liabilities:VAT:Output    -33.56 GEL
+
+2025-09-19 * "Sale to (406122529-დღგ) შპს თ და რ დისტრიბუშენ"
+    Assets:Bank:Checking    195.00 GEL
+    Income:Sales    -165.25 GEL
+    Liabilities:VAT:Output    -29.75 GEL
+
+2025-09-19 * "Sale to (405562519-დღგ) მბდ ინშაათ სანაი ვე თიჯარეთ ანონიმ შირქეთის საქართველოს ფილიალი"
+    Assets:Bank:Checking    175.00 GEL
+    Income:Sales    -148.31 GEL
+    Liabilities:VAT:Output    -26.69 GEL
+
+2025-09-19 * "Sale to (206341797-დღგ) შპს იარდი"
+    Assets:Bank:Checking    80.00 GEL
+    Income:Sales    -67.80 GEL
+    Liabilities:VAT:Output    -12.20 GEL
+
+2025-09-19 * "Sale to (205025079-დღგ) შპს მზიური"
+    Assets:Cash    120.00 GEL
+    Income:Sales    -101.69 GEL
+    Liabilities:VAT:Output    -18.31 GEL
+
+2025-09-19 * "Sale to (412762318-დღგ) შპს პანდა"
+    Assets:Bank:Checking    835.00 GEL
+    Income:Sales    -707.63 GEL
+    Liabilities:VAT:Output    -127.37 GEL
+
+2025-09-18 * "Sale to (405535327-დღგ) შპს ბრიტანია გლობალ"
+    Assets:Bank:Checking    200.00 GEL
+    Income:Sales    -169.49 GEL
+    Liabilities:VAT:Output    -30.51 GEL
+
+2025-09-18 * "Sale to (205264284-დღგ) შპს ხორცპროდუქტების ქარხანა-ვაკე"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-09-18 * "Sale to (412679061-დღგ) შპს მიმდემი"
+    Assets:Bank:Checking    65.00 GEL
+    Income:Sales    -55.08 GEL
+    Liabilities:VAT:Output    -9.92 GEL
+
+2025-09-18 * "Sale to (412749628-დღგ) შპს კალო"
+    Assets:Bank:Checking    600.00 GEL
+    Income:Sales    -508.47 GEL
+    Liabilities:VAT:Output    -91.53 GEL
+
+2025-09-18 * "Sale to (421268050-დღგ) შპს როსტვერკი"
+    Assets:Bank:Checking    180.00 GEL
+    Income:Sales    -152.54 GEL
+    Liabilities:VAT:Output    -27.46 GEL
+
+2025-09-18 * "Sale to (424086134-დღგ) შპს ლომსია 2023"
+    Assets:Bank:Checking    105.00 GEL
+    Income:Sales    -88.98 GEL
+    Liabilities:VAT:Output    -16.02 GEL
+
+2025-09-18 * "Sale to (424067618-დღგ) შპს მარტინ პამაჩ"
+    Assets:Bank:Checking    165.00 GEL
+    Income:Sales    -139.83 GEL
+    Liabilities:VAT:Output    -25.17 GEL
+
+2025-09-18 * "Sale to (231945241-დღგ) სს ელექტროქსელმშენი"
+    Assets:Bank:Checking    240.00 GEL
+    Income:Sales    -203.39 GEL
+    Liabilities:VAT:Output    -36.61 GEL
+
+2025-09-18 * "Sale to (239402491-დღგ) ასოციაცია ატუ"
+    Assets:Bank:Checking    35.00 GEL
+    Income:Sales    -29.66 GEL
+    Liabilities:VAT:Output    -5.34 GEL
+
+2025-09-17 * "Sale to (421268050-დღგ) შპს როსტვერკი"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-09-17 * "Sale to (404909765-დღგ) შპს გრინკლიმატ"
+    Assets:Bank:Checking    420.00 GEL
+    Income:Sales    -355.93 GEL
+    Liabilities:VAT:Output    -64.07 GEL
+
+2025-09-17 * "Sale to (425357829-დღგ) შპს FERRUM"
+    Assets:Bank:Checking    200.00 GEL
+    Income:Sales    -169.49 GEL
+    Liabilities:VAT:Output    -30.51 GEL
+
+2025-09-17 * "Sale to (425357829-დღგ) შპს FERRUM"
+    Assets:Bank:Checking    250.00 GEL
+    Income:Sales    -211.86 GEL
+    Liabilities:VAT:Output    -38.14 GEL
+
+2025-09-17 * "Sale to (206341797-დღგ) შპს იარდი"
+    Assets:Bank:Checking    80.00 GEL
+    Income:Sales    -67.80 GEL
+    Liabilities:VAT:Output    -12.20 GEL
+
+2025-09-17 * "Sale to (425357829-დღგ) შპს FERRUM"
+    Assets:Bank:Checking    230.00 GEL
+    Income:Sales    -194.92 GEL
+    Liabilities:VAT:Output    -35.08 GEL
+
+2025-09-17 * "Sale to (405164879-დღგ) შპს მინისო ჯორჯია"
+    Assets:Bank:Checking    405.00 GEL
+    Income:Sales    -343.22 GEL
+    Liabilities:VAT:Output    -61.78 GEL
+
+2025-09-17 * "Sale to (229650892-დღგ) შპს გეო-ინდუსტრია"
+    Assets:Bank:Checking    145.00 GEL
+    Income:Sales    -122.88 GEL
+    Liabilities:VAT:Output    -22.12 GEL
+
+2025-09-16 * "Sale to (202263255-დღგ) შპს შევარდენი"
+    Assets:Bank:Checking    5.00 GEL
+    Income:Sales    -4.24 GEL
+    Liabilities:VAT:Output    -0.76 GEL
+
+2025-09-16 * "Sale to (200276343-დღგ) შპს აზია სერვისი"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-16 * "Sale to (412679098-დღგ) შპს ეი თი კომპანი"
+    Assets:Bank:Checking    175.00 GEL
+    Income:Sales    -148.31 GEL
+    Liabilities:VAT:Output    -26.69 GEL
+
+2025-09-16 * "Sale to (412738337-დღგ) შპს მშენებელი"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-09-16 * "Sale to (401992162-დღგ) შპს დელტა კონსალტინგი"
+    Assets:Bank:Checking    220.00 GEL
+    Income:Sales    -186.44 GEL
+    Liabilities:VAT:Output    -33.56 GEL
+
+2025-09-16 * "Sale to (412791153-დღგ) შპს ფლოუ მასტერ სოლუშენი"
+    Assets:Bank:Checking    220.00 GEL
+    Income:Sales    -186.44 GEL
+    Liabilities:VAT:Output    -33.56 GEL
+
+2025-09-15 * "Sale to (404381414-დღგ) სს საქართველოს სასტუმროები და სპა"
+    Assets:Cash    45.00 GEL
+    Income:Sales    -38.14 GEL
+    Liabilities:VAT:Output    -6.86 GEL
+
+2025-09-15 * "Sale to (17001029675)  ხვიჩა თავაძე"
+    Assets:Bank:Checking    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-09-15 * "Sale to (441995389-დღგ) შპს ფაუდერპროჯექტ.ჯი"
+    Assets:Cash    715.00 GEL
+    Income:Sales    -605.93 GEL
+    Liabilities:VAT:Output    -109.07 GEL
+
+2025-09-15 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-15 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    40.00 GEL
+    Income:Sales    -33.90 GEL
+    Liabilities:VAT:Output    -6.10 GEL
+
+2025-09-15 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    10590.00 GEL
+    Income:Sales    -8974.58 GEL
+    Liabilities:VAT:Output    -1615.42 GEL
+
+2025-09-15 * "Sale to (412738337-დღგ) შპს მშენებელი"
+    Assets:Bank:Checking    90.00 GEL
+    Income:Sales    -76.27 GEL
+    Liabilities:VAT:Output    -13.73 GEL
+
+2025-09-15 * "Sale to (239402491-დღგ) ასოციაცია ატუ"
+    Assets:Bank:Checking    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-09-15 * "Sale to (205025079-დღგ) შპს მზიური"
+    Assets:Cash    105.00 GEL
+    Income:Sales    -88.98 GEL
+    Liabilities:VAT:Output    -16.02 GEL
+
+2025-09-13 * "Sale to (438107237-დღგ) შპს გასგო მოტორსი"
+    Assets:Bank:Checking    70.00 GEL
+    Income:Sales    -59.32 GEL
+    Liabilities:VAT:Output    -10.68 GEL
+
+2025-09-13 * "Sale to (412726046-დღგ) შპს მეგა"
+    Assets:Bank:Checking    110.00 GEL
+    Income:Sales    -93.22 GEL
+    Liabilities:VAT:Output    -16.78 GEL
+
+2025-09-13 * "Sale to (412726046-დღგ) შპს მეგა"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-13 * "Sale to (401984965) სს ემერჯენსი სერვისი"
+    Assets:Bank:Checking    10.00 GEL
+    Income:Sales    -8.47 GEL
+    Liabilities:VAT:Output    -1.53 GEL
+
+2025-09-13 * "Sale to (421268050-დღგ) შპს როსტვერკი"
+    Assets:Bank:Checking    185.00 GEL
+    Income:Sales    -156.78 GEL
+    Liabilities:VAT:Output    -28.22 GEL
+
+2025-09-13 * "Sale to (204516194-დღგ) შპს დილის პროდუქტები"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-13 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    635.00 GEL
+    Income:Sales    -538.14 GEL
+    Liabilities:VAT:Output    -96.86 GEL
+
+2025-09-12 * "Sale to (216297479-დღგ) შპს პროგრესი"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-09-12 * "Sale to (406122529-დღგ) შპს თ და რ დისტრიბუშენ"
+    Assets:Bank:Checking    65.00 GEL
+    Income:Sales    -55.08 GEL
+    Liabilities:VAT:Output    -9.92 GEL
+
+2025-09-12 * "Sale to (412679098-დღგ) შპს ეი თი კომპანი"
+    Assets:Bank:Checking    450.00 GEL
+    Income:Sales    -381.36 GEL
+    Liabilities:VAT:Output    -68.64 GEL
+
+2025-09-12 * "Sale to (419620501-დღგ) შპს გიო 2017"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-12 * "Sale to (412730889-დღგ) შპს დელტა გრუპი"
+    Assets:Cash    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-09-12 * "Sale to (412747112-დღგ) შპს მაქს პრინტი"
+    Assets:Bank:Checking    70.00 GEL
+    Income:Sales    -59.32 GEL
+    Liabilities:VAT:Output    -10.68 GEL
+
+2025-09-12 * "Sale to (430032582-დღგ) შპს იმერი"
+    Assets:Cash    555.00 GEL
+    Income:Sales    -470.34 GEL
+    Liabilities:VAT:Output    -84.66 GEL
+
+2025-09-12 * "Sale to (239402491-დღგ) ასოციაცია ატუ"
+    Assets:Bank:Checking    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-09-12 * "Sale to (202311738-დღგ) სს თ & რ დისტრიბუშენ"
+    Assets:Bank:Checking    20.00 GEL
+    Income:Sales    -16.95 GEL
+    Liabilities:VAT:Output    -3.05 GEL
+
+2025-09-12 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    75.00 GEL
+    Income:Sales    -63.56 GEL
+    Liabilities:VAT:Output    -11.44 GEL
+
+2025-09-11 * "Sale to (412699012-დღგ) შპს გ.ლ.ტ"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-09-11 * "Sale to (29001008040-დღგ) რამაზ ბერიშვილი"
+    Assets:Cash    230.00 GEL
+    Income:Sales    -194.92 GEL
+    Liabilities:VAT:Output    -35.08 GEL
+
+2025-09-11 * "Sale to (249257478) საქველმოქმედო ჰუმანიტარული ქალთა ფონდი სოხუმი"
+    Assets:Bank:Checking    140.00 GEL
+    Income:Sales    -118.64 GEL
+    Liabilities:VAT:Output    -21.36 GEL
+
+2025-09-11 * "Sale to (212671946-დღგ) სს ქუთაისის ავტოსერვისი რაში"
+    Assets:Cash    230.00 GEL
+    Income:Sales    -194.92 GEL
+    Liabilities:VAT:Output    -35.08 GEL
+
+2025-09-11 * "Sale to (206341797-დღგ) შპს იარდი"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-11 * "Sale to (206339005-დღგ) შპს ბესთსერვისი"
+    Assets:Cash    280.00 GEL
+    Income:Sales    -237.29 GEL
+    Liabilities:VAT:Output    -42.71 GEL
+
+2025-09-11 * "Sale to (412670587-დღგ) შპს მგა მოტორსი"
+    Assets:Bank:Checking    375.00 GEL
+    Income:Sales    -317.80 GEL
+    Liabilities:VAT:Output    -57.20 GEL
+
+2025-09-11 * "Sale to (202230790-დღგ) შპს კომპანია ორბიტა"
+    Assets:Bank:Checking    145.00 GEL
+    Income:Sales    -122.88 GEL
+    Liabilities:VAT:Output    -22.12 GEL
+
+2025-09-11 * "Sale to (202230790-დღგ) შპს კომპანია ორბიტა"
+    Assets:Bank:Checking    10.00 GEL
+    Income:Sales    -8.47 GEL
+    Liabilities:VAT:Output    -1.53 GEL
+
+2025-09-11 * "Sale to (202230790-დღგ) შპს კომპანია ორბიტა"
+    Assets:Bank:Checking    190.00 GEL
+    Income:Sales    -161.02 GEL
+    Liabilities:VAT:Output    -28.98 GEL
+
+2025-09-11 * "Sale to (202230790-დღგ) შპს კომპანია ორბიტა"
+    Assets:Bank:Checking    290.00 GEL
+    Income:Sales    -245.76 GEL
+    Liabilities:VAT:Output    -44.24 GEL
+
+2025-09-10 * "Sale to (431953709-დღგ) შპს ჯი-ემ-ჯი +"
+    Assets:Cash    70.00 GEL
+    Income:Sales    -59.32 GEL
+    Liabilities:VAT:Output    -10.68 GEL
+
+2025-09-10 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    85.00 GEL
+    Income:Sales    -72.03 GEL
+    Liabilities:VAT:Output    -12.97 GEL
+
+2025-09-10 * "Sale to (424067618-დღგ) შპს მარტინ პამაჩ"
+    Assets:Bank:Checking    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-09-10 * "Sale to (412670587-დღგ) შპს მგა მოტორსი"
+    Assets:Bank:Checking    50.00 GEL
+    Income:Sales    -42.37 GEL
+    Liabilities:VAT:Output    -7.63 GEL
+
+2025-09-10 * "Sale to (429323387-დღგ) შპს მეგაგრუპი"
+    Assets:Bank:Checking    45.00 GEL
+    Income:Sales    -38.14 GEL
+    Liabilities:VAT:Output    -6.86 GEL
+
+2025-09-10 * "Sale to (429323387-დღგ) შპს მეგაგრუპი"
+    Assets:Bank:Checking    295.00 GEL
+    Income:Sales    -250.00 GEL
+    Liabilities:VAT:Output    -45.00 GEL
+
+2025-09-10 * "Sale to (216297479-დღგ) შპს პროგრესი"
+    Assets:Bank:Checking    235.00 GEL
+    Income:Sales    -199.15 GEL
+    Liabilities:VAT:Output    -35.85 GEL
+
+2025-09-10 * "Sale to (216297479-დღგ) შპს პროგრესი"
+    Assets:Bank:Checking    40.00 GEL
+    Income:Sales    -33.90 GEL
+    Liabilities:VAT:Output    -6.10 GEL
+
+2025-09-10 * "Sale to (239402491-დღგ) ასოციაცია ატუ"
+    Assets:Bank:Checking    10.00 GEL
+    Income:Sales    -8.47 GEL
+    Liabilities:VAT:Output    -1.53 GEL
+
+2025-09-09 * "Sale to (412699012-დღგ) შპს გ.ლ.ტ"
+    Assets:Bank:Checking    10.00 GEL
+    Income:Sales    -8.47 GEL
+    Liabilities:VAT:Output    -1.53 GEL
+
+2025-09-09 * "Sale to (60002002641-დღგ) ცეზარი ჭელიძე"
+    Assets:Bank:Checking    80.00 GEL
+    Income:Sales    -67.80 GEL
+    Liabilities:VAT:Output    -12.20 GEL
+
+2025-09-09 * "Sale to (231945241-დღგ) სს ელექტროქსელმშენი"
+    Assets:Bank:Checking    70.00 GEL
+    Income:Sales    -59.32 GEL
+    Liabilities:VAT:Output    -10.68 GEL
+
+2025-09-09 * "Sale to (429323387-დღგ) შპს მეგაგრუპი"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-09-09 * "Sale to (412672727-დღგ) შპს   სამება"
+    Assets:Cash    545.00 GEL
+    Income:Sales    -461.86 GEL
+    Liabilities:VAT:Output    -83.14 GEL
+
+2025-09-09 * "Sale to (17601033405)  გიგა ქარციძე"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-09-09 * "Sale to (412721318-დღგ) შპს გალაკო"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-09 * "Sale to (401984965) სს ემერჯენსი სერვისი"
+    Assets:Bank:Checking    200.00 GEL
+    Income:Sales    -169.49 GEL
+    Liabilities:VAT:Output    -30.51 GEL
+
+2025-09-09 * "Sale to (202230790-დღგ) შპს კომპანია ორბიტა"
+    Assets:Bank:Checking    55.00 GEL
+    Income:Sales    -46.61 GEL
+    Liabilities:VAT:Output    -8.39 GEL
+
+2025-09-09 * "Sale to (412752114-დღგ) შპს ბი.ჯი."
+    Assets:Bank:Checking    375.00 GEL
+    Income:Sales    -317.80 GEL
+    Liabilities:VAT:Output    -57.20 GEL
+
+2025-09-09 * "Sale to (212798819-დღგ) შპს გურმანი"
+    Assets:Cash    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-09 * "Sale to (239402491-დღგ) ასოციაცია ატუ"
+    Assets:Bank:Checking    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-09-08 * "Sale to (206271755-დღგ) შპს როქი"
+    Assets:Bank:Checking    350.00 GEL
+    Income:Sales    -296.61 GEL
+    Liabilities:VAT:Output    -53.39 GEL
+
+2025-09-08 * "Sale to (412746827-დღგ) შპს არდი"
+    Assets:Bank:Checking    35.00 GEL
+    Income:Sales    -29.66 GEL
+    Liabilities:VAT:Output    -5.34 GEL
+
+2025-09-08 * "Sale to (405535327-დღგ) შპს ბრიტანია გლობალ"
+    Assets:Bank:Checking    200.00 GEL
+    Income:Sales    -169.49 GEL
+    Liabilities:VAT:Output    -30.51 GEL
+
+2025-09-08 * "Sale to (406122529-დღგ) შპს თ და რ დისტრიბუშენ"
+    Assets:Bank:Checking    200.00 GEL
+    Income:Sales    -169.49 GEL
+    Liabilities:VAT:Output    -30.51 GEL
+
+2025-09-08 * "Sale to (404621959-დღგ) შპს აპაჩი"
+    Assets:Bank:Checking    280.00 GEL
+    Income:Sales    -237.29 GEL
+    Liabilities:VAT:Output    -42.71 GEL
+
+2025-09-08 * "Sale to (421274203-დღგ) შპს ზუმი"
+    Assets:Bank:Checking    175.00 GEL
+    Income:Sales    -148.31 GEL
+    Liabilities:VAT:Output    -26.69 GEL
+
+2025-09-08 * "Sale to (211334830-დღგ) შპს ომეგა"
+    Assets:Bank:Checking    240.00 GEL
+    Income:Sales    -203.39 GEL
+    Liabilities:VAT:Output    -36.61 GEL
+
+2025-09-08 * "Sale to (206271755-დღგ) შპს როქი"
+    Assets:Bank:Checking    80.00 GEL
+    Income:Sales    -67.80 GEL
+    Liabilities:VAT:Output    -12.20 GEL
+
+2025-09-08 * "Sale to (441993112-დღგ) შპს New Road"
+    Assets:Bank:Checking    300.00 GEL
+    Income:Sales    -254.24 GEL
+    Liabilities:VAT:Output    -45.76 GEL
+
+2025-09-08 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-08 * "Sale to (204516194-დღგ) შპს დილის პროდუქტები"
+    Assets:Bank:Checking    80.00 GEL
+    Income:Sales    -67.80 GEL
+    Liabilities:VAT:Output    -12.20 GEL
+
+2025-09-08 * "Sale to (204516194-დღგ) შპს დილის პროდუქტები"
+    Assets:Bank:Checking    72.50 GEL
+    Income:Sales    -61.44 GEL
+    Liabilities:VAT:Output    -11.06 GEL
+
+2025-09-08 * "Sale to (419620501-დღგ) შპს გიო 2017"
+    Assets:Bank:Checking    405.00 GEL
+    Income:Sales    -343.22 GEL
+    Liabilities:VAT:Output    -61.78 GEL
+
+2025-09-08 * "Sale to (201946573-დღგ) შპს დიო"
+    Assets:Bank:Checking    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-09-08 * "Sale to (412747112-დღგ) შპს მაქს პრინტი"
+    Assets:Bank:Checking    105.00 GEL
+    Income:Sales    -88.98 GEL
+    Liabilities:VAT:Output    -16.02 GEL
+
+2025-09-08 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    165.00 GEL
+    Income:Sales    -139.83 GEL
+    Liabilities:VAT:Output    -25.17 GEL
+
+2025-09-08 * "Sale to (412744017-დღგ) შპს იმერეთი 2019"
+    Assets:Cash    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-09-08 * "Sale to (406122529-დღგ) შპს თ და რ დისტრიბუშენ"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-08 * "Sale to (205368029-დღგ) შპს ჰუნანის გზებისა და ხიდების სამშენებლო ჯგუფი კომპანიის ფილიალი საქართველოში"
+    Assets:Bank:Checking    105.00 GEL
+    Income:Sales    -88.98 GEL
+    Liabilities:VAT:Output    -16.02 GEL
+
+2025-09-06 * "Sale to (412752114-დღგ) შპს ბი.ჯი."
+    Assets:Bank:Checking    105.00 GEL
+    Income:Sales    -88.98 GEL
+    Liabilities:VAT:Output    -16.02 GEL
+
+2025-09-06 * "Sale to (205025079-დღგ) შპს მზიური"
+    Assets:Bank:Checking    1000.00 GEL
+    Income:Sales    -847.46 GEL
+    Liabilities:VAT:Output    -152.54 GEL
+
+2025-09-06 * "Sale to (412730889-დღგ) შპს დელტა გრუპი"
+    Assets:Cash    35.00 GEL
+    Income:Sales    -29.66 GEL
+    Liabilities:VAT:Output    -5.34 GEL
+
+2025-09-05 * "Sale to (237077961-დღგ) შპს ვასაძის პური"
+    Assets:Cash    85.00 GEL
+    Income:Sales    -72.03 GEL
+    Liabilities:VAT:Output    -12.97 GEL
+
+2025-09-05 * "Sale to (211334830-დღგ) შპს ომეგა"
+    Assets:Bank:Checking    350.00 GEL
+    Income:Sales    -296.61 GEL
+    Liabilities:VAT:Output    -53.39 GEL
+
+2025-09-04 * "Sale to (412724324-დღგ) შპს  ტექნოშოპი"
+    Assets:Bank:Checking    320.00 GEL
+    Income:Sales    -271.19 GEL
+    Liabilities:VAT:Output    -48.81 GEL
+
+2025-09-04 * "Sale to (412756094-დღგ) შპს ჯუზი"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-09-04 * "Sale to (412751785-დღგ) შპს გლობალ ტექნიკსი"
+    Assets:Bank:Checking    20.00 GEL
+    Income:Sales    -16.95 GEL
+    Liabilities:VAT:Output    -3.05 GEL
+
+2025-09-04 * "Sale to (412751785-დღგ) შპს გლობალ ტექნიკსი"
+    Assets:Bank:Checking    557.50 GEL
+    Income:Sales    -472.46 GEL
+    Liabilities:VAT:Output    -85.04 GEL
+
+2025-09-04 * "Sale to (412751785-დღგ) შპს გლობალ ტექნიკსი"
+    Assets:Bank:Checking    40.00 GEL
+    Income:Sales    -33.90 GEL
+    Liabilities:VAT:Output    -6.10 GEL
+
+2025-09-04 * "Sale to (412751785-დღგ) შპს გლობალ ტექნიკსი"
+    Assets:Bank:Checking    195.00 GEL
+    Income:Sales    -165.25 GEL
+    Liabilities:VAT:Output    -29.75 GEL
+
+2025-09-04 * "Sale to (412751785-დღგ) შპს გლობალ ტექნიკსი"
+    Assets:Bank:Checking    960.00 GEL
+    Income:Sales    -813.56 GEL
+    Liabilities:VAT:Output    -146.44 GEL
+
+2025-09-04 * "Sale to (412751785-დღგ) შპს გლობალ ტექნიკსი"
+    Assets:Bank:Checking    260.00 GEL
+    Income:Sales    -220.34 GEL
+    Liabilities:VAT:Output    -39.66 GEL
+
+2025-09-04 * "Sale to (404621959-დღგ) შპს აპაჩი"
+    Assets:Bank:Checking    75.00 GEL
+    Income:Sales    -63.56 GEL
+    Liabilities:VAT:Output    -11.44 GEL
+
+2025-09-04 * "Sale to (412756094-დღგ) შპს ჯუზი"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-04 * "Sale to (53001042871-დღგ) სანდრო ონიანი"
+    Assets:Bank:Checking    175.00 GEL
+    Income:Sales    -148.31 GEL
+    Liabilities:VAT:Output    -26.69 GEL
+
+2025-09-04 * "Sale to (406058126-დღგ) შპს კ-მოტორსი"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-03 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-03 * "Sale to (412756094-დღგ) შპს ჯუზი"
+    Assets:Bank:Checking    125.00 GEL
+    Income:Sales    -105.93 GEL
+    Liabilities:VAT:Output    -19.07 GEL
+
+2025-09-03 * "Sale to (212798819-დღგ) შპს გურმანი"
+    Assets:Cash    20.00 GEL
+    Income:Sales    -16.95 GEL
+    Liabilities:VAT:Output    -3.05 GEL
+
+2025-09-03 * "Sale to (202311738-დღგ) სს თ & რ დისტრიბუშენ"
+    Assets:Bank:Checking    155.00 GEL
+    Income:Sales    -131.36 GEL
+    Liabilities:VAT:Output    -23.64 GEL
+
+2025-09-02 * "Sale to (239402491-დღგ) ასოციაცია ატუ"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-09-02 * "Sale to (239402491-დღგ) ასოციაცია ატუ"
+    Assets:Bank:Checking    35.00 GEL
+    Income:Sales    -29.66 GEL
+    Liabilities:VAT:Output    -5.34 GEL
+
+2025-09-01 * "Sale to (431951872-დღგ) შპს მ დიზაინი"
+    Assets:Bank:Checking    470.00 GEL
+    Income:Sales    -398.31 GEL
+    Liabilities:VAT:Output    -71.69 GEL
+
+2025-09-01 * "Sale to (405535327-დღგ) შპს ბრიტანია გლობალ"
+    Assets:Bank:Checking    805.00 GEL
+    Income:Sales    -682.20 GEL
+    Liabilities:VAT:Output    -122.80 GEL
+
+2025-09-01 * "Sale to (405452585-დღგ) შპს აგრო ლიდერი 2020"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-09-01 * "Sale to (200274719-დღგ) შპს ბუ-ბა ჯორჯია"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-09-01 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-01 * "Sale to (419620501-დღგ) შპს გიო 2017"
+    Assets:Bank:Checking    90.00 GEL
+    Income:Sales    -76.27 GEL
+    Liabilities:VAT:Output    -13.73 GEL
+
+2025-09-01 * "Sale to (425060578-დღგ)  შპს დ-კ ქონსტრაქშენ"
+    Assets:Bank:Checking    40.00 GEL
+    Income:Sales    -33.90 GEL
+    Liabilities:VAT:Output    -6.10 GEL
+
+2025-09-01 * "Sale to (206271755-დღგ) შპს როქი"
+    Assets:Bank:Checking    160.00 GEL
+    Income:Sales    -135.59 GEL
+    Liabilities:VAT:Output    -24.41 GEL
+
+2025-09-01 * "Sale to (231945241-დღგ) სს ელექტროქსელმშენი"
+    Assets:Bank:Checking    1045.00 GEL
+    Income:Sales    -885.59 GEL
+    Liabilities:VAT:Output    -159.41 GEL
+
+2025-09-01 * "Sale to (400106611-დღგ) შპს   ნატურლენდი"
+    Assets:Bank:Checking    260.00 GEL
+    Income:Sales    -220.34 GEL
+    Liabilities:VAT:Output    -39.66 GEL
+
+2025-09-01 * "Sale to (405289664-დღგ) შპს დომინიკი"
+    Assets:Cash    180.00 GEL
+    Income:Sales    -152.54 GEL
+    Liabilities:VAT:Output    -27.46 GEL
+
+2025-09-01 * "Sale to (439865433-დღგ) შპს პაპირუსი"
+    Assets:Bank:Checking    90.00 GEL
+    Income:Sales    -76.27 GEL
+    Liabilities:VAT:Output    -13.73 GEL
+
+2025-09-01 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    390.00 GEL
+    Income:Sales    -330.51 GEL
+    Liabilities:VAT:Output    -59.49 GEL
+
+2025-09-01 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-09-01 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-09-01 * "Sale to (412730889-დღგ) შპს დელტა გრუპი"
+    Assets:Cash    105.00 GEL
+    Income:Sales    -88.98 GEL
+    Liabilities:VAT:Output    -16.02 GEL
+
+2025-09-01 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    930.00 GEL
+    Income:Sales    -788.14 GEL
+    Liabilities:VAT:Output    -141.86 GEL
+
+2025-09-01 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    170.00 GEL
+    Income:Sales    -144.07 GEL
+    Liabilities:VAT:Output    -25.93 GEL
+
+2025-09-01 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-09-01 * "Sale to (424067618-დღგ) შპს მარტინ პამაჩ"
+    Assets:Bank:Checking    265.00 GEL
+    Income:Sales    -224.58 GEL
+    Liabilities:VAT:Output    -40.42 GEL
+
+2025-09-01 * "Sale to (230868120-დღგ) შპს საქნახშირი"
+    Assets:Bank:Checking    45.00 GEL
+    Income:Sales    -38.14 GEL
+    Liabilities:VAT:Output    -6.86 GEL
+
+2025-09-01 * "Sale to (418468651-დღგ) შპს სითი ლაივი"
+    Assets:Bank:Checking    70.00 GEL
+    Income:Sales    -59.32 GEL
+    Liabilities:VAT:Output    -10.68 GEL
+
+2025-08-30 * "Sale to (404621959-დღგ) შპს აპაჩი"
+    Assets:Bank:Checking    285.00 GEL
+    Income:Sales    -241.53 GEL
+    Liabilities:VAT:Output    -43.47 GEL
+
+2025-08-30 * "Sale to (205264284-დღგ) შპს ხორცპროდუქტების ქარხანა-ვაკე"
+    Assets:Bank:Checking    230.00 GEL
+    Income:Sales    -194.92 GEL
+    Liabilities:VAT:Output    -35.08 GEL
+
+2025-08-30 * "Sale to (412763040-დღგ) შპს  თეგი მოტორსი"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-08-30 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-08-30 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    170.00 GEL
+    Income:Sales    -144.07 GEL
+    Liabilities:VAT:Output    -25.93 GEL
+
+2025-08-30 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-08-30 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-08-30 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-08-30 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    190.00 GEL
+    Income:Sales    -161.02 GEL
+    Liabilities:VAT:Output    -28.98 GEL
+
+2025-08-30 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-08-30 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    75.00 GEL
+    Income:Sales    -63.56 GEL
+    Liabilities:VAT:Output    -11.44 GEL
+
+2025-08-30 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    220.00 GEL
+    Income:Sales    -186.44 GEL
+    Liabilities:VAT:Output    -33.56 GEL
+
+2025-08-30 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    220.00 GEL
+    Income:Sales    -186.44 GEL
+    Liabilities:VAT:Output    -33.56 GEL
+
+2025-08-30 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-08-30 * "Sale to (404953528-დღგ) შპს  მეგაკო თრეიდი"
+    Assets:Bank:Checking    45.00 GEL
+    Income:Sales    -38.14 GEL
+    Liabilities:VAT:Output    -6.86 GEL
+
+2025-08-29 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    6765.00 GEL
+    Income:Sales    -5733.05 GEL
+    Liabilities:VAT:Output    -1031.95 GEL
+
+2025-08-29 * "Sale to (400202543-დღგ) შპს გაერთიანებული ლოჯისტიკური კომპანია"
+    Assets:Bank:Checking    235.00 GEL
+    Income:Sales    -199.15 GEL
+    Liabilities:VAT:Output    -35.85 GEL
+
+2025-08-29 * "Sale to (212693851-დღგ) შპს ორგსერვისი"
+    Assets:Bank:Checking    100.00 GEL
+    Income:Sales    -84.75 GEL
+    Liabilities:VAT:Output    -15.25 GEL
+
+2025-08-29 * "Sale to (202311738-დღგ) სს თ & რ დისტრიბუშენ"
+    Assets:Bank:Checking    45.00 GEL
+    Income:Sales    -38.14 GEL
+    Liabilities:VAT:Output    -6.86 GEL
+
+2025-08-29 * "Sale to (204516194-დღგ) შპს დილის პროდუქტები"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-08-29 * "Sale to (401992162-დღგ) შპს დელტა კონსალტინგი"
+    Assets:Bank:Checking    135.00 GEL
+    Income:Sales    -114.41 GEL
+    Liabilities:VAT:Output    -20.59 GEL
+
+2025-08-28 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    2825.00 GEL
+    Income:Sales    -2394.07 GEL
+    Liabilities:VAT:Output    -430.93 GEL
+
+2025-08-28 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    165.00 GEL
+    Income:Sales    -139.83 GEL
+    Liabilities:VAT:Output    -25.17 GEL
+
+2025-08-28 * "Sale to (404953528-დღგ) შპს  მეგაკო თრეიდი"
+    Assets:Bank:Checking    55.00 GEL
+    Income:Sales    -46.61 GEL
+    Liabilities:VAT:Output    -8.39 GEL
+
+2025-08-28 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    270.00 GEL
+    Income:Sales    -228.81 GEL
+    Liabilities:VAT:Output    -41.19 GEL
+
+2025-08-28 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    475.00 GEL
+    Income:Sales    -402.54 GEL
+    Liabilities:VAT:Output    -72.46 GEL
+
+2025-08-28 * "Sale to (404953528-დღგ) შპს  მეგაკო თრეიდი"
+    Assets:Bank:Checking    450.00 GEL
+    Income:Sales    -381.36 GEL
+    Liabilities:VAT:Output    -68.64 GEL
+
+2025-08-28 * "Sale to (202177205-დღგ) შპს თეგეტა მოტორსი"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-08-27 * "Sale to (412730889-დღგ) შპს დელტა გრუპი"
+    Assets:Cash    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-08-27 * "Sale to (202177205-დღგ) შპს თეგეტა მოტორსი"
+    Assets:Bank:Checking    350.00 GEL
+    Income:Sales    -296.61 GEL
+    Liabilities:VAT:Output    -53.39 GEL
+
+2025-08-27 * "Sale to (206337784-დღგ) შპს ბორნ სოფქიმია"
+    Assets:Cash    160.00 GEL
+    Income:Sales    -135.59 GEL
+    Liabilities:VAT:Output    -24.41 GEL
+
+2025-08-27 * "Sale to (418468651-დღგ) შპს სითი ლაივი"
+    Assets:Bank:Checking    345.00 GEL
+    Income:Sales    -292.37 GEL
+    Liabilities:VAT:Output    -52.63 GEL
+
+2025-08-27 * "Sale to (412750713-დღგ) შპს ქუთაისის სატრანსპორტო კომპანია"
+    Assets:Bank:Checking    320.00 GEL
+    Income:Sales    -271.19 GEL
+    Liabilities:VAT:Output    -48.81 GEL
+
+2025-08-27 * "Sale to (202311738-დღგ) სს თ & რ დისტრიბუშენ"
+    Assets:Bank:Checking    435.00 GEL
+    Income:Sales    -368.64 GEL
+    Liabilities:VAT:Output    -66.36 GEL
+
+2025-08-27 * "Sale to (202311738-დღგ) სს თ & რ დისტრიბუშენ"
+    Assets:Bank:Checking    170.00 GEL
+    Income:Sales    -144.07 GEL
+    Liabilities:VAT:Output    -25.93 GEL
+
+2025-08-27 * "Sale to (202311738-დღგ) სს თ & რ დისტრიბუშენ"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-08-26 * "Sale to (405404922-დღგ) შპს ნათს ინქორფორეითიდ"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-08-26 * "Sale to (201991229-დღგ) სს გეფა"
+    Assets:Bank:Checking    185.00 GEL
+    Income:Sales    -156.78 GEL
+    Liabilities:VAT:Output    -28.22 GEL
+
+2025-08-26 * "Sale to (212918271-დღგ) შპს ალატი"
+    Assets:Cash    105.00 GEL
+    Income:Sales    -88.98 GEL
+    Liabilities:VAT:Output    -16.02 GEL
+
+2025-08-26 * "Sale to (421277460-დღგ) შპს ოლიმპი"
+    Assets:Bank:Checking    35.00 GEL
+    Income:Sales    -29.66 GEL
+    Liabilities:VAT:Output    -5.34 GEL
+
+2025-08-26 * "Sale to (425060578-დღგ)  შპს დ-კ ქონსტრაქშენ"
+    Assets:Bank:Checking    195.00 GEL
+    Income:Sales    -165.25 GEL
+    Liabilities:VAT:Output    -29.75 GEL
+
+2025-08-26 * "Sale to (239862038-დღგ)  სს არქეოპოლისი"
+    Assets:Bank:Checking    190.00 GEL
+    Income:Sales    -161.02 GEL
+    Liabilities:VAT:Output    -28.98 GEL
+
+2025-08-26 * "Sale to (202263255-დღგ) შპს შევარდენი"
+    Assets:Bank:Checking    334.00 GEL
+    Income:Sales    -283.05 GEL
+    Liabilities:VAT:Output    -50.95 GEL
+
+2025-08-26 * "Sale to (202263255-დღგ) შპს შევარდენი"
+    Assets:Bank:Checking    169.00 GEL
+    Income:Sales    -143.22 GEL
+    Liabilities:VAT:Output    -25.78 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    80.00 GEL
+    Income:Sales    -67.80 GEL
+    Liabilities:VAT:Output    -12.20 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    260.00 GEL
+    Income:Sales    -220.34 GEL
+    Liabilities:VAT:Output    -39.66 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    300.00 GEL
+    Income:Sales    -254.24 GEL
+    Liabilities:VAT:Output    -45.76 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-08-26 * "Sale to (404953528-დღგ) შპს  მეგაკო თრეიდი"
+    Assets:Bank:Checking    55.00 GEL
+    Income:Sales    -46.61 GEL
+    Liabilities:VAT:Output    -8.39 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-08-26 * "Sale to (204875108-დღგ) შპს მეგაკო"
+    Assets:Bank:Checking    15.00 GEL
+    Income:Sales    -12.71 GEL
+    Liabilities:VAT:Output    -2.29 GEL
+
+2025-08-26 * "Sale to (421274203-დღგ) შპს ზუმი"
+    Assets:Bank:Checking    85.00 GEL
+    Income:Sales    -72.03 GEL
+    Liabilities:VAT:Output    -12.97 GEL
+
+2025-08-25 * "Sale to (17001003573-დღგ) ლერი ბაჯაძე"
+    Assets:Bank:Checking    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-08-25 * "Sale to (412752114-დღგ) შპს ბი.ჯი."
+    Assets:Bank:Checking    630.00 GEL
+    Income:Sales    -533.90 GEL
+    Liabilities:VAT:Output    -96.10 GEL
+
+2025-08-25 * "Sale to (62003014667-დღგ) ნუგზარ ჯიმშელეიშვილი"
+    Assets:Bank:Checking    1000.00 GEL
+    Income:Sales    -847.46 GEL
+    Liabilities:VAT:Output    -152.54 GEL
+
+2025-08-25 * "Sale to (202263255-დღგ) შპს შევარდენი"
+    Assets:Bank:Checking    50.00 GEL
+    Income:Sales    -42.37 GEL
+    Liabilities:VAT:Output    -7.63 GEL
+
+2025-08-25 * "Sale to (425060578-დღგ)  შპს დ-კ ქონსტრაქშენ"
+    Assets:Bank:Checking    45.00 GEL
+    Income:Sales    -38.14 GEL
+    Liabilities:VAT:Output    -6.86 GEL
+
+2025-08-25 * "Sale to (412726046-დღგ) შპს მეგა"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-08-25 * "Sale to (212671946-დღგ) სს ქუთაისის ავტოსერვისი რაში"
+    Assets:Cash    385.00 GEL
+    Income:Sales    -326.27 GEL
+    Liabilities:VAT:Output    -58.73 GEL
+
+2025-08-25 * "Sale to (205025079-დღგ) შპს მზიური"
+    Assets:Cash    230.00 GEL
+    Income:Sales    -194.92 GEL
+    Liabilities:VAT:Output    -35.08 GEL
+
+2025-08-25 * "Sale to (205025079-დღგ) შპს მზიური"
+    Assets:Cash    240.00 GEL
+    Income:Sales    -203.39 GEL
+    Liabilities:VAT:Output    -36.61 GEL
+
+2025-08-25 * "Sale to (60001009790-დღგ) კონსტანტინე ხელაძე"
+    Assets:Cash    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-08-25 * "Sale to (237077961-დღგ) შპს ვასაძის პური"
+    Assets:Cash    30.00 GEL
+    Income:Sales    -25.42 GEL
+    Liabilities:VAT:Output    -4.58 GEL
+
+2025-08-23 * "Sale to (412763353-დღგ) შპს  მედეგი ჯგუფი"
+    Assets:Bank:Checking    25.00 GEL
+    Income:Sales    -21.19 GEL
+    Liabilities:VAT:Output    -3.81 GEL
+
+2025-08-23 * "Sale to (422934436-დღგ) შპს დანი ჯგუფი"
+    Assets:Bank:Checking    60.00 GEL
+    Income:Sales    -50.85 GEL
+    Liabilities:VAT:Output    -9.15 GEL
+
+2025-08-22 * "Sale to (205264284-დღგ) შპს ხორცპროდუქტების ქარხანა-ვაკე"
+    Assets:Bank:Checking    90.00 GEL
+    Income:Sales    -76.27 GEL
+    Liabilities:VAT:Output    -13.73 GEL
+
+2025-08-22 * "Sale to (238725705-დღგ) შპს პინგვინი"
+    Assets:Cash    50.00 GEL
+    Income:Sales    -42.37 GEL
+    Liabilities:VAT:Output    -7.63 GEL
+
+2025-08-22 * "Sale to (205264284-დღგ) შპს ხორცპროდუქტების ქარხანა-ვაკე"
+    Assets:Bank:Checking    110.00 GEL
+    Income:Sales    -93.22 GEL
+    Liabilities:VAT:Output    -16.78 GEL
+
+2025-08-21 * "Sale to (206335223-დღგ) შპს ჯიბე"
+    Assets:Bank:Checking    150.00 GEL
+    Income:Sales    -127.12 GEL
+    Liabilities:VAT:Output    -22.88 GEL
+
+2025-08-21 * "Sale to (429323387-დღგ) შპს მეგაგრუპი"
+    Assets:Bank:Checking    130.00 GEL
+    Income:Sales    -110.17 GEL
+    Liabilities:VAT:Output    -19.83 GEL
+
+2025-08-21 * "Sale to (406217721-დღგ) შპს ასპ-გრუპი"
+    Assets:Cash    70.00 GEL
+    Income:Sales    -59.32 GEL
+    Liabilities:VAT:Output    -10.68 GEL
+
+2025-08-21 * "Sale to (202177205-დღგ) შპს თეგეტა მოტორსი"
+    Assets:Bank:Checking    80.00 GEL
+    Income:Sales    -67.80 GEL
+    Liabilities:VAT:Output    -12.20 GEL
+
+2025-08-21 * "Sale to (239862298-დღგ) შპს ინდიკო"
+    Assets:Bank:Checking    195.00 GEL
+    Income:Sales    -165.25 GEL
+    Liabilities:VAT:Output    -29.75 GEL
+
+2025-08-21 * "Sale to (205239053-დღგ) შპს ჯეო მარკი"
+    Assets:Bank:Checking    1020.00 GEL
+    Income:Sales    -864.41 GEL
+    Liabilities:VAT:Output    -155.59 GEL
+
+2025-08-21 * "Sale to (245621288-დღგ) შპს გორგია"
+    Assets:Cash    85.00 GEL
+    Income:Sales    -72.03 GEL
+    Liabilities:VAT:Output    -12.97 GEL
