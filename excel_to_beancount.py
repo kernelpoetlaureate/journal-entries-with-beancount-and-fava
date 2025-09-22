@@ -34,7 +34,7 @@ class ExcelToBeancountImporter:
         self.vat_rate = 0.18
         
         # Default currency
-        self.default_currency = "INR"  # Based on your existing ledger
+        self.default_currency = "GEL"  # Georgian Lari
         
     def load_data(self):
         """Load Excel data with proper encoding handling"""
@@ -111,22 +111,65 @@ class ExcelToBeancountImporter:
         
         return datetime.now().strftime('%Y-%m-%d')
     
-    def determine_payment_account(self, payment_method):
+    def clean_organization_name(self, org_name):
+        """Clean organization name to create valid Beancount account names"""
+        if pd.isna(org_name):
+            return "Unknown"
+        
+        # Convert to string and clean
+        clean_name = str(org_name).strip()
+        
+        # Replace problematic characters for account names
+        # Keep Georgian characters, letters, numbers, and some symbols
+        clean_name = re.sub(r'[^\w\s\-\(\)ა-ჰ]', '', clean_name)
+        
+        # Replace spaces and special characters with hyphens (not underscores)
+        clean_name = re.sub(r'[\s\-\(\)]+', '-', clean_name)
+        
+        # Remove leading/trailing hyphens and underscores
+        clean_name = clean_name.strip('-_')
+        
+        # Ensure it starts with a letter or number (Beancount requirement)
+        if clean_name and not clean_name[0].isalnum():
+            clean_name = 'C' + clean_name  # Prefix with 'C' for Customer
+        
+        # Replace any remaining underscores with hyphens
+        clean_name = clean_name.replace('_', '-')
+        
+        # Limit length for readability
+        if len(clean_name) > 50:
+            clean_name = clean_name[:50]
+        
+        return clean_name if clean_name else "Unknown"
+    
+    def get_customer_accounts(self, organization):
+        """Generate customer-specific account names"""
+        customer_name = self.clean_organization_name(organization)
+        
+        return {
+            'bank': f"Assets:Bank:Checking:{customer_name}",
+            'cash': f"Assets:Cash:{customer_name}",
+            'sales': f"Income:Sales:{customer_name}",
+            'vat': f"Liabilities:VAT:Output:{customer_name}",
+            'receivables': f"Assets:Receivables:{customer_name}"
+        }
+    
+    def determine_payment_account(self, payment_method, customer_accounts):
         """Determine asset account based on payment method"""
         if pd.isna(payment_method):
-            return self.bank_account  # Default to bank
+            return customer_accounts['bank']  # Default to bank
         
         payment_str = str(payment_method).lower()
         
         # Check for cash indicators
         if any(word in payment_str for word in ['cash', 'ნაღდი', 'ნაღ', 'კეში']):
-            return self.cash_account
+            return customer_accounts['cash']
         # Check for bank indicators  
         elif any(word in payment_str for word in ['bank', 'ბანკი', 'transfer', 'card', 'ბარათი']):
-            return self.bank_account
+            return customer_accounts['bank']
         else:
             # If unclear, default to bank
-            return self.bank_account
+            return customer_accounts['bank']
     
     def calculate_vat_amounts(self, total_amount):
         """Calculate VAT and net amounts from VAT-inclusive total"""
@@ -139,9 +182,19 @@ class ExcelToBeancountImporter:
         vat_amount = total_amount - net_amount
         
         return net_amount, vat_amount
+        """Calculate VAT and net amounts from VAT-inclusive total"""
+        # Total = Net + VAT
+        # VAT = Net * VAT_rate
+        # Total = Net + (Net * VAT_rate) = Net * (1 + VAT_rate)
+        # Therefore: Net = Total / (1 + VAT_rate)
+        
+        net_amount = total_amount / (1 + self.vat_rate)
+        vat_amount = total_amount - net_amount
+        
+        return net_amount, vat_amount
     
     def create_beancount_entry(self, row):
-        """Create a single Beancount sales transaction entry"""
+        """Create a single Beancount sales transaction entry with customer sub-accounts"""
         date = self.format_date(row.get('date'))
         organization = str(row.get('organization', 'Unknown Customer')).strip()
         total_amount = self.clean_amount(row.get('amount', 0))
@@ -151,38 +204,56 @@ class ExcelToBeancountImporter:
             return None  # Skip zero-value transactions
         
         # Clean organization name for description
-        organization = organization.replace('"', '\\"')  # Escape quotes
+        organization_clean = organization.replace('"', '\\"')  # Escape quotes
+        
+        # Get customer-specific accounts
+        customer_accounts = self.get_customer_accounts(organization)
         
         # Determine payment account (cash vs bank)
-        asset_account = self.determine_payment_account(payment_method)
+        asset_account = self.determine_payment_account(payment_method, customer_accounts)
         
         # Calculate VAT components
         net_amount, vat_amount = self.calculate_vat_amounts(total_amount)
         
         entry_lines = []
-        entry_lines.append(f'{date} * "Sale to {organization}"')
+        entry_lines.append(f'{date} * "Sale to {organization_clean}"')
         
-        # Sales transaction structure:
-        # Asset account receives the total amount
+        # Sales transaction structure with customer sub-accounts:
+        # Asset account (Bank/Cash) receives the total amount
         entry_lines.append(f'    {asset_account}    {total_amount:.2f} {self.default_currency}')
         
-        # Sales revenue (net amount without VAT)
-        entry_lines.append(f'    {self.sales_account}    {-net_amount:.2f} {self.default_currency}')
+        # Sales revenue (net amount without VAT) - customer specific
+        entry_lines.append(f'    {customer_accounts["sales"]}    {-net_amount:.2f} {self.default_currency}')
         
-        # VAT liability (VAT amount)
-        entry_lines.append(f'    {self.vat_account}    {-vat_amount:.2f} {self.default_currency}')
+        # VAT liability (VAT amount) - customer specific
+        entry_lines.append(f'    {customer_accounts["vat"]}    {-vat_amount:.2f} {self.default_currency}')
         
         return '\n'.join(entry_lines) + '\n'
     
     def generate_account_declarations(self):
-        """Generate account open declarations for sales operations"""
+        """Generate account open declarations for sales operations with customer sub-accounts"""
         accounts = set()
         
-        # Always add these core sales accounts
-        accounts.add(self.sales_account)
-        accounts.add(self.vat_account)
-        accounts.add(self.bank_account)
-        accounts.add(self.cash_account)
+        # Collect all customer accounts
+        for _, row in self.df.iterrows():
+            organization = row.get('organization', 'Unknown Customer')
+            customer_accounts = self.get_customer_accounts(organization)
+            
+            # Add all customer-specific accounts
+            for account in customer_accounts.values():
+                accounts.add(account)
+        
+        # Also add parent accounts for organizational clarity
+        parent_accounts = [
+            "Assets:Bank:Checking",
+            "Assets:Cash", 
+            "Assets:Receivables",
+            "Income:Sales",
+            "Liabilities:VAT:Output"
+        ]
+        
+        for parent in parent_accounts:
+            accounts.add(parent)
         
         declarations = []
         for account in sorted(accounts):
