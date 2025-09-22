@@ -1,0 +1,29 @@
+;; My Personal Ledger
+option "title" "My Personal Finance"
+option "operating_currency" "INR"
+
+;; Open accounts (required before using)
+2025-01-01 open Assets:Bank:Checking INR
+2025-01-01 open Assets:Cash INR
+2025-01-01 open Income:Salary INR
+2025-01-01 open Expenses:Food INR
+2025-01-01 open Expenses:Transport INR
+2025-01-01 open Equity:Opening-Balances INR
+
+;; Starting balance
+2025-09-01 * "Opening balance"
+  Assets:Bank:Checking    25000.00 INR
+  Equity:Opening-Balances
+
+;; Sample transactions
+2025-09-22 * "Monthly salary"
+  Assets:Bank:Checking   50000.00 INR
+  Income:Salary
+
+2025-09-22 * "Lunch"
+  Expenses:Food    300.00 INR
+  Assets:Cash
+
+2025-09-22 * "ATaaaM withdrawal" 
+  Assets:Cash      2000.00 INR
+  Assets:Bank:Checking

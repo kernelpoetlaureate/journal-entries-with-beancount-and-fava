@@ -1,0 +1,995 @@
+;; Generated from Excel file: report(18).xls
+;; Generated on: 2025-09-22 13:11:16
+
+2025-01-01 open Assets:Bank:Checking INR
+2025-01-01 open Expenses:Miscellaneous INR
+2025-01-01 open Expenses:Transport INR
+
+
+2025-09-22 * "927939183"
+    Assets:Bank:Checking    -200.00 INR
+    Expenses:Miscellaneous
+
+2025-09-22 * "927925013"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-09-22 * "927896740"
+    Assets:Bank:Checking    -145.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927728915"
+    Assets:Bank:Checking    -65.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927728233"
+    Assets:Bank:Checking    -5.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927727830"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927725612"
+    Assets:Bank:Checking    -20.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927725527"
+    Assets:Bank:Checking    -245.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927725175"
+    Assets:Bank:Checking    -1800.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927724863"
+    Assets:Bank:Checking    -460.00 INR
+    Expenses:Miscellaneous
+
+2025-09-20 * "927714970"
+    Assets:Bank:Checking    -35.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927598350"
+    Assets:Bank:Checking    -400.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927597573"
+    Assets:Bank:Checking    -215.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927594683"
+    Assets:Bank:Checking    -420.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927592596"
+    Assets:Bank:Checking    -985.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927592220"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927592116"
+    Assets:Bank:Checking    -505.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927591768"
+    Assets:Bank:Checking    -600.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927591567"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927591058"
+    Assets:Bank:Checking    -220.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927510800"
+    Assets:Bank:Checking    -195.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927502246"
+    Assets:Bank:Checking    -175.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927499167"
+    Assets:Bank:Checking    -80.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927415273"
+    Assets:Bank:Checking    -120.00 INR
+    Expenses:Miscellaneous
+
+2025-09-19 * "927414909"
+    Assets:Bank:Checking    -835.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927318799"
+    Assets:Bank:Checking    -200.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927318167"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927317955"
+    Assets:Bank:Checking    -65.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927307364"
+    Assets:Bank:Checking    -600.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927305355"
+    Assets:Bank:Checking    -180.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927305069"
+    Assets:Bank:Checking    -105.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927287280"
+    Assets:Bank:Checking    -165.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927188184"
+    Assets:Bank:Checking    -240.00 INR
+    Expenses:Miscellaneous
+
+2025-09-18 * "927146540"
+    Assets:Bank:Checking    -35.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "927023014"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "927015741"
+    Assets:Bank:Checking    -420.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "926969704"
+    Assets:Bank:Checking    -200.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "926955325"
+    Assets:Bank:Checking    -250.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "926948268"
+    Assets:Bank:Checking    -80.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "926931317"
+    Assets:Bank:Checking    -230.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "926895981"
+    Assets:Bank:Checking    -405.00 INR
+    Expenses:Miscellaneous
+
+2025-09-17 * "926895546"
+    Assets:Bank:Checking    -145.00 INR
+    Expenses:Miscellaneous
+
+2025-09-16 * "926769039"
+    Assets:Bank:Checking    -5.00 INR
+    Expenses:Miscellaneous
+
+2025-09-16 * "926767524"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-16 * "926767429"
+    Assets:Bank:Checking    -175.00 INR
+    Expenses:Miscellaneous
+
+2025-09-16 * "926727149"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-09-16 * "926677788"
+    Assets:Bank:Checking    -220.00 INR
+    Expenses:Miscellaneous
+
+2025-09-16 * "926576703"
+    Assets:Bank:Checking    -220.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926485067"
+    Assets:Bank:Checking    -45.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926470816"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926467877"
+    Assets:Bank:Checking    -715.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926464010"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926463598"
+    Assets:Bank:Checking    -40.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926457525"
+    Assets:Bank:Checking    -10590.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926436231"
+    Assets:Bank:Checking    -90.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926372053"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-09-15 * "926349644"
+    Assets:Bank:Checking    -105.00 INR
+    Expenses:Miscellaneous
+
+2025-09-13 * "926132545"
+    Assets:Bank:Checking    -70.00 INR
+    Expenses:Miscellaneous
+
+2025-09-13 * "926131596"
+    Assets:Bank:Checking    -110.00 INR
+    Expenses:Miscellaneous
+
+2025-09-13 * "926131357"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-13 * "926033180"
+    Assets:Bank:Checking    -10.00 INR
+    Expenses:Miscellaneous
+
+2025-09-13 * "926032972"
+    Assets:Bank:Checking    -185.00 INR
+    Expenses:Miscellaneous
+
+2025-09-13 * "926032293"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-13 * "926031521"
+    Assets:Bank:Checking    -635.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925965753"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925965434"
+    Assets:Bank:Checking    -65.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925964844"
+    Assets:Bank:Checking    -450.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925964691"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925964046"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925959905"
+    Assets:Bank:Checking    -70.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925934261"
+    Assets:Bank:Checking    -555.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925847007"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925786558"
+    Assets:Bank:Checking    -20.00 INR
+    Expenses:Miscellaneous
+
+2025-09-12 * "925768014"
+    Assets:Bank:Checking    -75.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925696998"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925696175"
+    Assets:Bank:Checking    -230.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925638308"
+    Assets:Bank:Checking    -140.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925614285"
+    Assets:Bank:Checking    -230.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925598026"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925591554"
+    Assets:Bank:Checking    -280.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925566345"
+    Assets:Bank:Checking    -375.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925521995"
+    Assets:Bank:Checking    -145.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925521597"
+    Assets:Bank:Checking    -10.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925520661"
+    Assets:Bank:Checking    -190.00 INR
+    Expenses:Miscellaneous
+
+2025-09-11 * "925520482"
+    Assets:Bank:Checking    -290.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925432440"
+    Assets:Bank:Checking    -70.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925415860"
+    Assets:Bank:Checking    -85.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925415002"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925414748"
+    Assets:Bank:Checking    -50.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925414318"
+    Assets:Bank:Checking    -45.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925350509"
+    Assets:Bank:Checking    -295.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925349109"
+    Assets:Bank:Checking    -235.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925347732"
+    Assets:Bank:Checking    -40.00 INR
+    Expenses:Miscellaneous
+
+2025-09-10 * "925283060"
+    Assets:Bank:Checking    -10.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925162900"
+    Assets:Bank:Checking    -10.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925162817"
+    Assets:Bank:Checking    -80.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925162407"
+    Assets:Bank:Checking    -70.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925157978"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925157921"
+    Assets:Bank:Checking    -545.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925157290"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925156043"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925154426"
+    Assets:Bank:Checking    -200.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925153632"
+    Assets:Bank:Checking    -55.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925067631"
+    Assets:Bank:Checking    -375.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "925050075"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-09 * "924960178"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924883630"
+    Assets:Bank:Checking    -350.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924882537"
+    Assets:Bank:Checking    -35.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924880927"
+    Assets:Bank:Checking    -200.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924878816"
+    Assets:Bank:Checking    -200.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924878420"
+    Assets:Bank:Checking    -280.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924877739"
+    Assets:Bank:Checking    -175.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924877601"
+    Assets:Bank:Checking    -240.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924877156"
+    Assets:Bank:Checking    -80.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924843489"
+    Assets:Bank:Checking    -300.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924820564"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924734167"
+    Assets:Bank:Checking    -80.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924733443"
+    Assets:Bank:Checking    -72.50 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924732799"
+    Assets:Bank:Checking    -405.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924732016"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924731057"
+    Assets:Bank:Checking    -105.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924730715"
+    Assets:Bank:Checking    -165.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924730538"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924711291"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-08 * "924689731"
+    Assets:Bank:Checking    -105.00 INR
+    Expenses:Miscellaneous
+
+2025-09-06 * "924544280"
+    Assets:Bank:Checking    -105.00 INR
+    Expenses:Miscellaneous
+
+2025-09-06 * "924544155"
+    Assets:Bank:Checking    -1000.00 INR
+    Expenses:Miscellaneous
+
+2025-09-06 * "924488804"
+    Assets:Bank:Checking    -35.00 INR
+    Expenses:Miscellaneous
+
+2025-09-05 * "924374703"
+    Assets:Bank:Checking    -85.00 INR
+    Expenses:Miscellaneous
+
+2025-09-05 * "924373448"
+    Assets:Bank:Checking    -350.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924080547"
+    Assets:Bank:Checking    -320.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924079925"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924079674"
+    Assets:Bank:Checking    -20.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924079320"
+    Assets:Bank:Checking    -557.50 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924078348"
+    Assets:Bank:Checking    -40.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924078107"
+    Assets:Bank:Checking    -195.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924077734"
+    Assets:Bank:Checking    -960.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924076414"
+    Assets:Bank:Checking    -260.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924074316"
+    Assets:Bank:Checking    -75.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "924024570"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "923979160"
+    Assets:Bank:Checking    -175.00 INR
+    Expenses:Miscellaneous
+
+2025-09-04 * "923970708"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-03 * "923826608"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-03 * "923819846"
+    Assets:Bank:Checking    -125.00 INR
+    Expenses:Miscellaneous
+
+2025-09-03 * "923781301"
+    Assets:Bank:Checking    -20.00 INR
+    Expenses:Miscellaneous
+
+2025-09-03 * "923671427"
+    Assets:Bank:Checking    -155.00 INR
+    Expenses:Miscellaneous
+
+2025-09-02 * "923391279"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-09-02 * "923356823"
+    Assets:Bank:Checking    -35.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923260707"
+    Assets:Bank:Checking    -470.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923256350"
+    Assets:Bank:Checking    -805.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923255623"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923255390"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923255025"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923253628"
+    Assets:Bank:Checking    -90.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923253489"
+    Assets:Bank:Checking    -40.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923253281"
+    Assets:Bank:Checking    -160.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923250021"
+    Assets:Bank:Checking    -1045.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923241878"
+    Assets:Bank:Checking    -260.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923238239"
+    Assets:Bank:Checking    -180.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923201667"
+    Assets:Bank:Checking    -90.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923190708"
+    Assets:Bank:Checking    -390.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923190374"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923190184"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923189380"
+    Assets:Bank:Checking    -105.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923187716"
+    Assets:Bank:Checking    -930.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923187294"
+    Assets:Bank:Checking    -170.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923186902"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923150778"
+    Assets:Bank:Checking    -265.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923148104"
+    Assets:Bank:Checking    -45.00 INR
+    Expenses:Miscellaneous
+
+2025-09-01 * "923066659"
+    Assets:Bank:Checking    -70.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922899597"
+    Assets:Bank:Checking    -285.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922899033"
+    Assets:Bank:Checking    -230.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922895495"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922881024"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922880756"
+    Assets:Bank:Checking    -170.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922880598"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922880169"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922879611"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922879475"
+    Assets:Bank:Checking    -190.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922879337"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922879175"
+    Assets:Bank:Checking    -75.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922879021"
+    Assets:Bank:Checking    -220.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922878759"
+    Assets:Bank:Checking    -220.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922878487"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-08-30 * "922878281"
+    Assets:Bank:Checking    -45.00 INR
+    Expenses:Miscellaneous
+
+2025-08-29 * "922749685"
+    Assets:Bank:Checking    -6765.00 INR
+    Expenses:Miscellaneous
+
+2025-08-29 * "922748234"
+    Assets:Bank:Checking    -235.00 INR
+    Expenses:Miscellaneous
+
+2025-08-29 * "922747857"
+    Assets:Bank:Checking    -100.00 INR
+    Expenses:Miscellaneous
+
+2025-08-29 * "922744405"
+    Assets:Bank:Checking    -45.00 INR
+    Expenses:Miscellaneous
+
+2025-08-29 * "922707177"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-08-29 * "922686259"
+    Assets:Bank:Checking    -135.00 INR
+    Expenses:Miscellaneous
+
+2025-08-28 * "922502524"
+    Assets:Bank:Checking    -2825.00 INR
+    Expenses:Miscellaneous
+
+2025-08-28 * "922501923"
+    Assets:Bank:Checking    -165.00 INR
+    Expenses:Miscellaneous
+
+2025-08-28 * "922501902"
+    Assets:Bank:Checking    -55.00 INR
+    Expenses:Miscellaneous
+
+2025-08-28 * "922501796"
+    Assets:Bank:Checking    -270.00 INR
+    Expenses:Miscellaneous
+
+2025-08-28 * "922501238"
+    Assets:Bank:Checking    -475.00 INR
+    Expenses:Miscellaneous
+
+2025-08-28 * "922500966"
+    Assets:Bank:Checking    -450.00 INR
+    Expenses:Miscellaneous
+
+2025-08-28 * "922484331"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922362487"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922359952"
+    Assets:Bank:Checking    -350.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922344822"
+    Assets:Bank:Checking    -160.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922261637"
+    Assets:Bank:Checking    -345.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922256047"
+    Assets:Bank:Checking    -320.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922215216"
+    Assets:Bank:Checking    -435.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922213265"
+    Assets:Bank:Checking    -170.00 INR
+    Expenses:Miscellaneous
+
+2025-08-27 * "922210647"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922108803"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922107967"
+    Assets:Bank:Checking    -185.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922107544"
+    Assets:Bank:Checking    -105.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922107326"
+    Assets:Bank:Checking    -35.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922107182"
+    Assets:Bank:Checking    -195.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922107087"
+    Assets:Bank:Checking    -190.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922039994"
+    Assets:Bank:Checking    -334.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922039899"
+    Assets:Bank:Checking    -169.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922009115"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922008679"
+    Assets:Bank:Checking    -80.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922008371"
+    Assets:Bank:Checking    -260.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922007698"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922007298"
+    Assets:Bank:Checking    -300.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922007064"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922006558"
+    Assets:Bank:Checking    -55.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922005908"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922004222"
+    Assets:Bank:Checking    -15.00 INR
+    Expenses:Miscellaneous
+
+2025-08-26 * "922003240"
+    Assets:Bank:Checking    -85.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921835009"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921831121"
+    Assets:Bank:Checking    -630.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921821367"
+    Assets:Bank:Checking    -1000.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921703230"
+    Assets:Bank:Checking    -50.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921700795"
+    Assets:Bank:Checking    -45.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921668700"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921647888"
+    Assets:Bank:Checking    -385.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921644358"
+    Assets:Bank:Checking    -230.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921644097"
+    Assets:Bank:Checking    -240.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921608122"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-08-25 * "921607893"
+    Assets:Bank:Checking    -30.00 INR
+    Expenses:Miscellaneous
+
+2025-08-23 * "921445082"
+    Assets:Bank:Checking    -25.00 INR
+    Expenses:Miscellaneous
+
+2025-08-23 * "921443441"
+    Assets:Bank:Checking    -60.00 INR
+    Expenses:Miscellaneous
+
+2025-08-22 * "921284151"
+    Assets:Bank:Checking    -90.00 INR
+    Expenses:Miscellaneous
+
+2025-08-22 * "921277338"
+    Assets:Bank:Checking    -50.00 INR
+    Expenses:Miscellaneous
+
+2025-08-22 * "921251851"
+    Assets:Bank:Checking    -110.00 INR
+    Expenses:Miscellaneous
+
+2025-08-21 * "921060101"
+    Assets:Bank:Checking    -150.00 INR
+    Expenses:Miscellaneous
+
+2025-08-21 * "921059784"
+    Assets:Bank:Checking    -130.00 INR
+    Expenses:Miscellaneous
+
+2025-08-21 * "921059651"
+    Assets:Bank:Checking    -70.00 INR
+    Expenses:Miscellaneous
+
+2025-08-21 * "921026754"
+    Assets:Bank:Checking    -80.00 INR
+    Expenses:Miscellaneous
+
+2025-08-21 * "921025363"
+    Assets:Bank:Checking    -195.00 INR
+    Expenses:Miscellaneous
+
+2025-08-21 * "920986985"
+    Assets:Bank:Checking    -1020.00 INR
+    Expenses:Miscellaneous
+
+2025-08-21 * "920943825"
+    Assets:Bank:Checking    -85.00 INR
+    Expenses:Miscellaneous
