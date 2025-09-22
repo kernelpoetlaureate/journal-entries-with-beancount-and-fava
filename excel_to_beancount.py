@@ -298,7 +298,58 @@ class ExcelToBeancountImporter:
             print(f"Successfully converted {successful_conversions} transactions to {output_file}")
         
         return result
+    
+    def export_to_beancount(self, output_file):
+        """Export processed data to a Beancount file with proper account definitions"""
+        try:
+            # Collect all unique accounts that will be used
+            unique_accounts = set()
+            unique_accounts.add(self.sales_account)
+            unique_accounts.add(self.vat_account)
+            unique_accounts.add(self.cash_account)
+            unique_accounts.add(self.bank_account)
+            
+            # Process data to collect customer accounts
+            transaction_data = []
+            for _, row in self.df.iterrows():
+                organization = self.clean_organization_name(row['organization'])
+                customer_accounts = self.get_customer_accounts(organization)
+                payment_method = row.get('payment_method', 'bank')
+                payment_account = self.determine_payment_account(payment_method, customer_accounts)
+                
+                # Add accounts to unique set
+                for account in customer_accounts.values():
+                    unique_accounts.add(account)
+                unique_accounts.add(payment_account)
+                
+                # Store transaction data
+                transaction_data.append({
+                    'date': self.format_date(row['date']),
+                    'amount': self.clean_amount(row['amount']),
+                    'organization': organization,
+                    'payment_account': payment_account
+                })
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                # Write header comment
+                f.write(f";; Generated from Excel file: {self.excel_file_path}\n")
+                f.write(f";; Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+                
+                # Write account opening directives
+                for account in sorted(unique_accounts):
+                    f.write(f"2021-01-01 open {account} {self.default_currency}\n")
+                
+                f.write("\n")  # Empty line after account definitions
+                
+                # Write transactions
+                for tx in transaction_data:
+                    f.write(f"{tx['date']} * \"Sale to {tx['organization']}\"\n")
+                    f.write(f"    {self.sales_account}  -{tx['amount']:.2f} {self.default_currency}\n")
+                    f.write(f"    {tx['payment_account']}  {tx['amount']:.2f} {self.default_currency}\n\n")
 
+            print(f"Exported {len(transaction_data)} transactions with account definitions to {output_file}")
+        except Exception as e:
+            print(f"Error exporting to Beancount file: {e}")
 
 def main():
     """Main function to run the importer"""
@@ -323,4 +374,16 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    # Path to the new .xls file
+    excel_file_path = "report(18).xls"
+
+    # Initialize the importer with the file path
+    importer = ExcelToBeancountImporter(excel_file_path)
+
+    # Load and process the data
+    if importer.load_data():
+        print("Data loaded successfully. Proceeding with export.")
+        # Export to Beancount file
+        importer.export_to_beancount("imported_transactions.beancount")
+    else:
+        print("Failed to load data from the Excel file.")
