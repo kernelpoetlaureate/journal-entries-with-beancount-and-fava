@@ -62,8 +62,37 @@ class TBCPaymentsImporter:
             # Clean amounts first, then filter out zero or negative amounts
             self.df['amount'] = self.df['amount'].apply(self.clean_amount)
             self.df = self.df[self.df['amount'] > 0]
-            
-            print(f"Processed {len(self.df)} valid payment transactions")
+            # Normalize dates to datetime (helps later deduplication and formatting)
+            if 'date' in self.df.columns:
+                try:
+                    self.df['date'] = pd.to_datetime(self.df['date'], errors='coerce')
+                except Exception:
+                    # leave as-is if conversion fails
+                    pass
+
+            # Normalize tax_code column (ensure missing values are None)
+            if 'tax_code' in self.df.columns:
+                # Convert empty strings to None so pd.notna checks work downstream
+                self.df['tax_code'] = self.df['tax_code'].where(self.df['tax_code'].notna() & (self.df['tax_code'].astype(str).str.strip() != ''), None)
+            else:
+                self.df['tax_code'] = None
+
+            # Deduplicate identical payment rows that have the same date, amount, customer and tax_code
+            before_dedup = len(self.df)
+            # For deduplication use a normalized date string if possible, otherwise the raw value
+            if self.df['date'].dtype == 'datetime64[ns]':
+                self.df['_dedup_date'] = self.df['date'].dt.strftime('%Y-%m-%d')
+            else:
+                self.df['_dedup_date'] = self.df['date'].astype(str)
+
+            self.df = self.df.drop_duplicates(subset=['_dedup_date', 'amount', 'customer', 'tax_code'])
+            # Drop helper column
+            try:
+                self.df = self.df.drop(columns=['_dedup_date'])
+            except Exception:
+                pass
+
+            print(f"Processed {len(self.df)} valid payment transactions (removed {before_dedup - len(self.df)} duplicate rows)")
             return True
         except Exception as e:
             print(f"Error loading Excel file: {e}")

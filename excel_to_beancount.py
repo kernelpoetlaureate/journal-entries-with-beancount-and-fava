@@ -182,16 +182,6 @@ class ExcelToBeancountImporter:
         vat_amount = total_amount - net_amount
         
         return net_amount, vat_amount
-        """Calculate VAT and net amounts from VAT-inclusive total"""
-        # Total = Net + VAT
-        # VAT = Net * VAT_rate
-        # Total = Net + (Net * VAT_rate) = Net * (1 + VAT_rate)
-        # Therefore: Net = Total / (1 + VAT_rate)
-        
-        net_amount = total_amount / (1 + self.vat_rate)
-        vat_amount = total_amount - net_amount
-        
-        return net_amount, vat_amount
     
     def create_beancount_entry(self, row):
         """Create a single Beancount sales transaction entry with customer sub-accounts"""
@@ -257,7 +247,8 @@ class ExcelToBeancountImporter:
         
         declarations = []
         for account in sorted(accounts):
-            declarations.append(f'2025-01-01 open {account} {self.default_currency}')
+            # Ensure proper formatting - account name, space, currency, newline
+            declarations.append(f'2021-01-01 open {account} {self.default_currency}')
         
         return '\n'.join(declarations) + '\n\n'
     
@@ -317,7 +308,11 @@ class ExcelToBeancountImporter:
                 payment_method = row.get('payment_method', 'bank')
                 payment_account = self.determine_payment_account(payment_method, customer_accounts)
                 
-                # Add accounts to unique set
+                # Add receivables account to unique set (this is what we'll actually use)
+                receivables_account = f"Assets:Receivables:{organization}"
+                unique_accounts.add(receivables_account)
+                
+                # Add other accounts to unique set for potential future use
                 for account in customer_accounts.values():
                     unique_accounts.add(account)
                 unique_accounts.add(payment_account)
@@ -343,9 +338,18 @@ class ExcelToBeancountImporter:
                 
                 # Write transactions
                 for tx in transaction_data:
+                    # Create receivables account for customer
+                    receivables_account = f"Assets:Receivables:{self.clean_organization_name(tx['organization'])}"
+                    
+                    # Calculate VAT components
+                    total_amount = tx['amount']
+                    net_sales = total_amount / (1 + self.vat_rate)  # Remove VAT from total
+                    vat_amount = total_amount - net_sales           # VAT portion
+                    
                     f.write(f"{tx['date']} * \"Sale to {tx['organization']}\"\n")
-                    f.write(f"    {self.sales_account}  -{tx['amount']:.2f} {self.default_currency}\n")
-                    f.write(f"    {tx['payment_account']}  {tx['amount']:.2f} {self.default_currency}\n\n")
+                    f.write(f"    {self.sales_account}  -{net_sales:.2f} {self.default_currency}\n")
+                    f.write(f"    {self.vat_account}  -{vat_amount:.2f} {self.default_currency}\n")
+                    f.write(f"    {receivables_account}  {total_amount:.2f} {self.default_currency}\n\n")
 
             print(f"Exported {len(transaction_data)} transactions with account definitions to {output_file}")
         except Exception as e:
