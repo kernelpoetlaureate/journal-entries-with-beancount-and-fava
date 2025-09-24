@@ -154,32 +154,58 @@ class Transaction:
 T = TypeVar('T')
 E = TypeVar('E')
 
+# Sentinel object to distinguish "not provided" from "explicitly None"
+_MISSING = object()
 
 @dataclass(frozen=True)
 class Result(Generic[T, E]):
     """Result type for operations that can fail"""
-    value: T | None = None
-    error: E | None = None
+    _value: T | object = _MISSING
+    _error: E | object = _MISSING
 
     def __post_init__(self):
-        if (self.value is None) == (self.error is None):
+        """Validate that exactly one of value or error is provided"""
+        has_value = self._value is not _MISSING
+        has_error = self._error is not _MISSING
+        
+        if not (has_value ^ has_error):  # XOR: exactly one must be true
             raise ValueError("Result must have exactly one of value or error")
 
+    @classmethod
+    def ok(cls, value: T) -> 'Result[T, E]':
+        """Create successful result"""
+        return cls(_value=value)
+    
+    @classmethod
+    def err(cls, error: E) -> 'Result[T, E]':
+        """Create error result"""
+        return cls(_error=error)
+
     def is_ok(self) -> bool:
-        return self.value is not None
+        return self._value is not _MISSING
 
     def is_err(self) -> bool:
-        return self.error is not None
+        return self._error is not _MISSING
 
     def unwrap(self) -> T:
         """Get value or raise exception"""
-        if self.error is not None:
-            raise Exception(f"Result contained error: {self.error}")
-        return self.value
+        if self._error is not _MISSING:
+            raise Exception(f"Result contained error: {self._error}")
+        return self._value  # type: ignore
 
     def unwrap_or(self, default: T) -> T:
         """Get value or return default"""
-        return self.value if self.is_ok() else default
+        return self._value if self.is_ok() else default  # type: ignore
+    
+    @property
+    def value(self) -> T | None:
+        """Get value if present, None otherwise"""
+        return self._value if self._value is not _MISSING else None  # type: ignore
+    
+    @property
+    def error(self) -> E | None:
+        """Get error if present, None otherwise"""
+        return self._error if self._error is not _MISSING else None  # type: ignore
 
 
 # Common error types
