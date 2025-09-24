@@ -1,6 +1,0 @@
-date,description,amount,currency,type,account
-2025-09-22,Monthly Salary,50000,INR,credit,Assets:Bank:Savings
-2025-09-25,Coffee Shop - Latte,-250,INR,debit,Assets:Bank:Savings
-2025-09-26,ATM Withdrawal,-2000,INR,debit,Assets:Bank:Savings
-2025-09-27,Refund from Vendor,150,INR,credit,Assets:Bank:Savings
-2025-09-28,Online Subscription,-499,INR,debit,Assets:Bank:Savings

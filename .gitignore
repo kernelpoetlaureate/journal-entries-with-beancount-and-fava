@@ -1,0 +1,55 @@
+# Personal data files
+*.beancount
+*.xls
+*.xlsx
+*.csv
+tbc.xlsx
+
+# Setup and run scripts
+*.bat
+*.sh
+setup.*
+start-beancount.*
+
+# Specific personal files
+imported_transactions.beancount
+my-ledger.beancount
+out.beancount
+sales_fixed.beancount
+sales_transactions.beancount
+sales_with_customers.beancount
+tbc_payments.beancount
+report(18).xls
+
+# Python cache and build files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
