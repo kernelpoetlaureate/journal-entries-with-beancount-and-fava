@@ -126,9 +126,9 @@ class ExcelToBeancountImporter:
             df = df[available].rename(columns=self.column_map)
             df = df.dropna(subset=['organization', 'amount'])
             self.df = df
-            return Result(value=None)
+            return Result.ok(None)
         except Exception as e:
-            return Result(error=ProcessingError(f"Failed to load Excel: {e}"))
+            return Result.err(ProcessingError(f"Failed to load Excel: {e}"))
 
     def _clean_amount(self, amount) -> Amount:
         if pd.isna(amount):
@@ -206,7 +206,7 @@ class ExcelToBeancountImporter:
             pm = row.get('payment_method')
 
             if Decimal(total_amt) == Decimal('0'):
-                return Result(error=ProcessingError('Zero amount'))
+                return Result.err(ProcessingError('Zero amount'))
 
             accounts = self.get_customer_accounts(org)
             asset_account = self.determine_payment_account(pm, accounts)
@@ -228,13 +228,13 @@ class ExcelToBeancountImporter:
                 metadata={"source": self.excel_file_path},
             )
 
-            return Result(value=tx)
+            return Result.ok(tx)
         except Exception as e:
-            return Result(error=ProcessingError(str(e)))
+            return Result.err(ProcessingError(str(e)))
 
     def convert_to_transactions(self) -> Result[list[Transaction], ProcessingError]:
         if self.df is None:
-            return Result(error=ProcessingError('No data loaded'))
+            return Result.err(ProcessingError('No data loaded'))
         txs: list[Transaction] = []
         errors: list[ProcessingError] = []
         for idx, row in self.df.iterrows():
@@ -245,8 +245,8 @@ class ExcelToBeancountImporter:
                 errors.append(r.error)
         if errors:
             # still return transactions but surface that there were errors
-            return Result(value=txs)
-        return Result(value=txs)
+            return Result.ok(txs)
+        return Result.ok(txs)
 
 
 def main():
